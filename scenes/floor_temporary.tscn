@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bluplm060t5nc"]
+
+[sub_resource type="Gradient" id="Gradient_ysodj"]
+offsets = PackedFloat32Array(0, 0.56790125, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.77945024, 0.46954817, 0.45773882, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2lusr"]
+gradient = SubResource("Gradient_ysodj")
+
+[node name="floor temporary" type="Sprite2D"]
+position = Vector2(0, -7.0000005)
+scale = Vector2(1.03125, 0.203125)
+texture = SubResource("GradientTexture2D_2lusr")

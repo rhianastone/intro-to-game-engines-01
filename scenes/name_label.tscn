@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bxf86udglllny"]
+
+[node name="name label" type="RichTextLabel"]
+offset_right = 66.0
+offset_bottom = 32.0
+text = "rhiana"
