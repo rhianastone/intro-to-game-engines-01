@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://emwbesxdq235"]
+
+[ext_resource type="Texture2D" uid="uid://dalrlxnni5jhs" path="res://assets/characters/DinoSprites - mort.png" id="1_igli2"]
+[ext_resource type="Script" uid="uid://bcpxnf5n38tpn" path="res://scripts/player_1.gd" id="1_qir2g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qir2g"]
+atlas = ExtResource("1_igli2")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkt5g"]
+atlas = ExtResource("1_igli2")
+region = Rect2(288, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h2x5w"]
+atlas = ExtResource("1_igli2")
+region = Rect2(312, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64a0l"]
+atlas = ExtResource("1_igli2")
+region = Rect2(336, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcfem"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qir2g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkt5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h2x5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64a0l")
+}],
+"loop": true,
+"name": &"stomp",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snghq"]
+radius = 6.0827627
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_qir2g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(26, -9)
+sprite_frames = SubResource("SpriteFrames_dcfem")
+animation = &"stomp"
+autoplay = "stomp"
+frame = 1
+frame_progress = 0.30047774
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(26, -7)
+shape = SubResource("CircleShape2D_snghq")
